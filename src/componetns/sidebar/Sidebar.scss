@@ -1,0 +1,36 @@
+.sidebar {
+  display: flex;
+  flex: 0.35;
+  height: 100vh;
+  background-color: ivory;
+
+  .sidebarLeft {
+    display: flex;
+    flex-direction: column; //カラム型にすることで縦型に配列ができる
+    align-items: center;
+    margin-top: 15px;
+    background-color: blue;
+    padding: 7px 15px;
+
+    .serverIcon {
+      width: 60px;
+      height: 60px;
+      background-color: aquamarine;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      position: relative;
+
+
+      img {
+        position: absolute;
+        width: 50px;
+        top:50%;
+        left: 50%;
+        transform: translate(-50% , -50%)
+      }
+    }
+
+  }
+
+
+}
