@@ -1,8 +1,8 @@
 .sidebar {
   display: flex;
-  flex: 0.35;
+  flex: 0.3;
   height: 100vh;
-  background-color: ivory;
+  background-color: #33363d;
 
   .sidebarLeft {
     display: flex;
@@ -14,7 +14,6 @@
     .serverIcon {
       width: 60px;
       height: 60px;
-      background-color: aquamarine;
       border-radius: 999px;
       margin-bottom: 10px;
       position: relative;
@@ -24,11 +23,87 @@
       img {
         position: absolute;
         width: 50px;
-        top:50%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50% , -50%)
+        transform: translate(-50%, -50%)
       }
     }
+
+  }
+
+  .sidebarRight {
+    width: 300px;
+    background-color: #2b2d33;
+    position: relative;
+    flex-grow: 1;
+
+    .sidebarTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      color: #fff;
+
+    }
+
+    .sidebarChannels {
+      padding: 13px;
+
+      .sidebarChannelsHeader {
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+      }
+
+      .sidebarHeader {
+        display: flex;
+      }
+
+      .sidebarIcon {
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+  .sidebarFooter{
+    width: 93%;
+    padding-bottom:10px ;
+    border-top: 1px solid #686a6e;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-left: -3px;
+
+    .sidebarAccount{
+      display: flex;
+      align-items: center;
+
+      img{
+        width: 60px;
+      }
+
+      h4{
+        color: #fff;
+        font-weight: 500;
+      }
+
+      span{
+        color: #686a6e;
+      }
+
+    }
+      .sidebarVoice{
+        display: flex;
+        align-items: center;
+        color: #686a6e;
+      }
 
   }
 
