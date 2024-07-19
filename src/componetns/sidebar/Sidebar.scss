@@ -8,8 +8,7 @@
     display: flex;
     flex-direction: column; //カラム型にすることで縦型に配列ができる
     align-items: center;
-    margin-top: 15px;
-    background-color: blue;
+    background-color: #1a1c20;
     padding: 7px 15px;
 
     .serverIcon {
@@ -19,6 +18,7 @@
       border-radius: 999px;
       margin-bottom: 10px;
       position: relative;
+      margin-top: 7px;
 
 
       img {
