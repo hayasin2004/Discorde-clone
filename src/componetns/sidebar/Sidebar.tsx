@@ -8,7 +8,7 @@ class Sidebar extends Component {
 
                 <div className="sidebarLeft">
 
-                    <div className="serverIcon">
+                    <div className="serverIcon" >
                         <img src="/heart.png" alt="heart"/>
                     </div>
                     <div className="serverIcon">
