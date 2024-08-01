@@ -1,17 +1,17 @@
 import React from 'react';
 import "./Login.scss"
 import { Button } from "@mui/material"
-import {auth, provider} from "../../firebase";
-import {signInWithPopup} from "firebase/auth"
+import { getAuth, signInWithPopup} from "firebase/auth";
+import {provider} from "../../firebase";
 
-
-
+const auth = getAuth();
 const Login = () => {
     const signIn = () => {
-        signInWithPopup(auth, provider)
+        signInWithPopup(auth, provider).catch((err) => {
+            alert(err.message)
+        })
     }
     return (
-        <div>
             <div className="login">
                 <div className="loginLogo">
                     <img src="./discordLogo.jpg" alt="Discord"/>
@@ -21,7 +21,7 @@ const Login = () => {
                     Login
                 </button>
             </div>
-        </div>
+
     );
 
 }
@@ -29,6 +29,3 @@ const Login = () => {
 
 export default Login;
 
-function signInWithPopup(auth: Auth, provider: firebase.auth.GoogleAuthProvider) {
-    throw new Error('Function not implemented.');
-}

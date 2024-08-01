@@ -20,4 +20,7 @@ export const userSlice = createSlice({
     }
 });
 
+
+// login logoutを変数として分割代入してあげる
+export  const  { login , logout } = userSlice.actions
 export default userSlice.reducer;

@@ -1,8 +1,8 @@
 import { initializeApp } from "firebase/app";
-import  {getFirestore} from "firebase/firestore/lite"
-import  {getAuth} from "firebase/auth"
+// import  {getFirestore} from "firebase/firestore/lite　↓のようにする"
+import  {getFirestore} from "firebase/firestore"
+import  {getAuth ,GoogleAuthProvider} from "firebase/auth"
 import firebase from "firebase/compat";
-import GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
 const firebaseConfig = {
     apiKey: "AIzaSyC_ZNLoHxPb8X26Bb5Um1MehZXeV-g3hOw",
     authDomain: "discord-clone-udemy-a6c8e.firebaseapp.com",
