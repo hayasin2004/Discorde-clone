@@ -12,6 +12,7 @@ interface Channels {
 }
 
 
+
 const UseCollection = (data : string) => {
 
     const [documents, setdocuments] = useState<Channels[]>([]);
@@ -23,14 +24,14 @@ const UseCollection = (data : string) => {
             querySnapshot.forEach((doc) =>
                 channelsResults.push({
                     id: doc.id,
-                    channel: doc.data(), 多分４３講義から
+                    channel: doc.data(),
                 }))
             setdocuments(channelsResults);
         })
     }, []);
 
     return (
-        <div>useCollection</div>
+        {documents}
         )
         ;
 }

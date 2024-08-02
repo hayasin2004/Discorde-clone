@@ -1,10 +1,14 @@
 import {configureStore} from "@reduxjs/toolkit";
 // import {useReducer} from "react";　→　これのせいでエラーが起きた。エラー原因はインポート元がreduxではなくてreactだったため
 import userReducers from "../features/userSlice"
+import  channelReducer from  "../features/channelSlice"
 export {configureStore} from "@reduxjs/toolkit"
 
 export const store = configureStore({
-    reducer : userReducers,
+    reducer : {
+        user : userReducers ,
+        channel : channelReducer ,
+    },
 });
 
 export type AppDispatch = typeof store.dispatch;
