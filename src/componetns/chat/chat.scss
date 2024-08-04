@@ -1,11 +1,17 @@
 .chat {
   display: flex;
+
+
   flex-direction: column;
   flex-grow: 1;
   background-color: #33363d;
+  height: 100vh;
+  .chatMessage {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
 
-  .chatMessage{
-    flex-grow: 1;
+
   }
 
   .chatInput {
@@ -23,27 +29,33 @@
 
       input {
         padding: 15px;
+
         background: transparent;
         border: none;
         outline: none;
         color: #fff;
         font-size: large;
-        width: 100%;
+        width: 97%;
+
+
       }
 
-      .chatInputButton{
+      .chatInputButton {
         display: none;
-      //  送信ボタンを消すことによってエンターキーで送信 →あってもなくても機能する
+        //  送信ボタンを消すことによってエンターキーで送信 →あってもなくても機能する
+      }
 
+      .break-word {
+        word-break: break-all;
       }
     }
 
-      .chatInputIcons{
+    .chatInputIcons {
 
-        .MuiSvgIcon-root {
-          padding: 5px;
-        }
+      .MuiSvgIcon-root {
+        padding: 5px;
       }
+    }
 
   }
 

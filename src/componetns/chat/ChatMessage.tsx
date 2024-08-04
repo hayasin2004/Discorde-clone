@@ -1,22 +1,38 @@
-import React, {Component} from 'react';
+import React from 'react';
 import "./ChatMessaga.scss"
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import {Timestamp} from "firebase/firestore";
+import {Avatar} from "@mui/material";
 
 
-const ChatMessage = () => {
+type Props = {
+    timestamp : Timestamp;
+    message : string;
+    user : {
+        uid : string ;
+        photo : string ;
+        email : string ;
+        displayName : string ;
 
+    };
+}
+
+const ChatMessage = (props: Props) => {
+    const {message , timestamp , user} = props;
+    // console.log("これは時刻の表示です", timestamp)
     return (
         <div className="message">
-            <AccountCircleIcon/>
+            <Avatar　src={user?.photo}/>
             <div className="messageInfo">
                 <h4>
-                    Masataka
+                    {/*　?　→　これ書かないとエラー*/}
+                    {user?.displayName}
                     <span className="messageTimeStamp">
-                        2024/07/20
-                </span>
+                        { new Date(timestamp?.toDate()).toLocaleDateString()}
+
+                    </span>
                 </h4>
-                <p>
-                    メッセージ
+                <p className="break-word">
+                    {message}
                 </p>
             </div>
         </div>
